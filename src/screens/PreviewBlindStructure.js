@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import { Fonts } from '../CustomFonts';
 
-const PreviewBlindStructure = ({ gameTime, raiseBlindTime }) => {
+const PreviewBlindStructure = ({ route }) => {
+  const { gameTime, raiseBlindTime } = route.params;
   const [currentBlindIndex, setCurrentBlindIndex] = useState(0);
   const [blindStructure, setBlindStructure] = useState([]);
 
@@ -11,7 +12,7 @@ const PreviewBlindStructure = ({ gameTime, raiseBlindTime }) => {
       const levels = Math.floor(gameTime / raiseBlindTime);
       const structure = [];
       let bigBlind = 1;
-      let currentTime = 180; // Start time from 03:00
+      let currentTime = raiseBlindTime; 
 
       for (let i = 0; i < levels; i++) {
         const level = i + 1;
@@ -28,27 +29,28 @@ const PreviewBlindStructure = ({ gameTime, raiseBlindTime }) => {
 
       return structure;
     };
+
     setBlindStructure(computeBlindStructure());
 
     const timer = setInterval(() => {
       setCurrentBlindIndex(prevIndex => prevIndex + 1);
-    }, raiseBlindTime * 1000); // Convert raiseBlindTime from seconds to milliseconds
+    }, raiseBlindTime * 1000); 
 
-    return () => clearInterval(timer); 
+    return () => clearInterval(timer);
   }, [gameTime, raiseBlindTime]);
 
   return (
     <View style={styles.container}>
       <View style={styles.headerContainer}>
-        <Text style={[styles.headerText, { color: '#1987FF' }]}>Level</Text>
-        <Text style={styles.headerText}>Time</Text>
-        <Text style={styles.headerText}>Blinds</Text>
+        <Text style={[styles.headerText, { color: '#5BBCFF', fontFamily: Fonts.DMSR }]}>Level</Text>
+        <Text style={[styles.headerText, { fontFamily: Fonts.DMSR }]}>Time</Text>
+        <Text style={[styles.headerText, { fontFamily: Fonts.DMSR }]}>Blinds</Text>
       </View>
       {blindStructure.slice(0, currentBlindIndex + 1).map((blind, index) => (
         <View style={styles.row} key={blind.level}>
-          <Text style={[styles.data, { color: '#1987FF' }]}>{blind.level}</Text>
-          <Text style={[styles.data, styles.dataCenter]}>{blind.timeString}</Text>
-          <Text style={[styles.data, styles.dataRight]}>{blind.blinds}</Text>
+          <Text style={[styles.data, { color: '#5BBCFF', fontFamily: Fonts.SFPro }]}>{blind.level}</Text>
+          <Text style={[styles.data, styles.dataCenter, { fontFamily: Fonts.SFPro }]}>{blind.timeString}</Text>
+          <Text style={[styles.data, styles.dataRight, { fontFamily: Fonts.SFPro }]}>{blind.blinds}</Text>
         </View>
       ))}
     </View>
@@ -58,33 +60,35 @@ const PreviewBlindStructure = ({ gameTime, raiseBlindTime }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: '#E3E1D9'
   },
   headerContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     paddingHorizontal: 10,
-    paddingVertical: 10,
+    paddingVertical: 15,
   },
   headerText: {
     color: 'black',
     textAlign: 'center',
-    fontSize: 15,
-    fontFamily: Fonts.ISMR,
-    fontWeight: '500',
+    fontSize: 18,
   },
   row: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     paddingVertical: 5,
     paddingHorizontal: 10,
+    backgroundColor: 'white',
+    borderBottomWidth: 1,
+    opacity: 0.8,
+    borderBottomColor: '#C7C8CC', 
+    padding: 10,
   },
   data: {
     color: 'black',
     textAlign: 'left',
     flex: 1,
-    fontSize: 15,
-    fontFamily: Fonts.SFPro,
+    fontSize: 18,
   },
   dataCenter: {
     textAlign: 'center',

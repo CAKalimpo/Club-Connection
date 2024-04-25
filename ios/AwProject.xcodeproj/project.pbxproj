@@ -27,6 +27,7 @@
 		8E123D6F6C1B4240989DA744 /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 785F71F12DCE4DBB854EDE68 /* Poppins-ExtraBold.ttf */; };
 		83E8B3EB95504D6BA01C339B /* InstrumentSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CD01CA04A5E4F96A95015F5 /* InstrumentSans-SemiBold.ttf */; };
 		829EEBCC5D6B4FDAB4E4C4C2 /* InstrumentSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8804F5F3FBE64B9784E2E1E8 /* InstrumentSans-Regular.ttf */; };
+		25B26C9F06B24977B4849C87 /* DMS-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8834F2CBE5C94BB6AA4A067D /* DMS-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		785F71F12DCE4DBB854EDE68 /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; name = "Poppins-ExtraBold.ttf"; path = "../assets/fonts/Poppins-ExtraBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		4CD01CA04A5E4F96A95015F5 /* InstrumentSans-SemiBold.ttf */ = {isa = PBXFileReference; name = "InstrumentSans-SemiBold.ttf"; path = "../assets/fonts/InstrumentSans-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		8804F5F3FBE64B9784E2E1E8 /* InstrumentSans-Regular.ttf */ = {isa = PBXFileReference; name = "InstrumentSans-Regular.ttf"; path = "../assets/fonts/InstrumentSans-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8834F2CBE5C94BB6AA4A067D /* DMS-Regular.ttf */ = {isa = PBXFileReference; name = "DMS-Regular.ttf"; path = "../assets/fonts/DMS-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +193,7 @@
 				785F71F12DCE4DBB854EDE68 /* Poppins-ExtraBold.ttf */,
 				4CD01CA04A5E4F96A95015F5 /* InstrumentSans-SemiBold.ttf */,
 				8804F5F3FBE64B9784E2E1E8 /* InstrumentSans-Regular.ttf */,
+				8834F2CBE5C94BB6AA4A067D /* DMS-Regular.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				8E123D6F6C1B4240989DA744 /* Poppins-ExtraBold.ttf in Resources */,
 				83E8B3EB95504D6BA01C339B /* InstrumentSans-SemiBold.ttf in Resources */,
 				829EEBCC5D6B4FDAB4E4C4C2 /* InstrumentSans-Regular.ttf in Resources */,
+				25B26C9F06B24977B4849C87 /* DMS-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

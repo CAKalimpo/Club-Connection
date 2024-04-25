@@ -2,6 +2,10 @@
   "migIndex": 1,
   "data": [
     {
+      "path": "assets/fonts/DMS-Regular.ttf",
+      "sha1": "d27f051995049b2fb0445c7b1caca9e88950766a"
+    },
+    {
       "path": "assets/fonts/DMSXtra.ttf",
       "sha1": "5aef6f351fc71740af511471ed69fb07dfa1b3e5"
     },

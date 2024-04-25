@@ -8,4 +8,5 @@ export const Fonts = {
   PEx: 'Poppins-ExtraBold',
   ISMS: 'InstrumentSans-SemiBold',
   ISMR: 'InstrumentSans-Regular',
+  DMSR: 'DMS-Regular',
 };

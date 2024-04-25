@@ -18,22 +18,23 @@ const StackNavigation = () => {
           options={{
             headerBackground: () => (
               <LinearGradient
-                colors={['#D875C7', '#8576FF']} // Pink to Blue
-                start={{ x: 0, y: 0 }} // From top-left
-                end={{ x: 1, y: 0 }} // To top-right
+                colors={['#D875C7', '#8576FF']} 
+                start={{ x: 0, y: 0 }}
+                end={{ x: 1, y: 0 }}
                 style={{ flex: 1}}
               />
             ),
-            headerTintColor: '#fff',// Adjust text color if needed
+            headerTintColor: '#fff',
             headerBackImage: () => (
               <Image
                 source={require('./assets/imgs/arrowback.png')}
-                style={{ width: 24, height: 24, marginLeft: 10 }}
+                style={{ width: 26, height: 24, marginLeft: 10 }}
               />
             ),
             headerTitleStyle: {
-              fontSize: 16,
+              fontSize: 18,
               fontFamily: Fonts.ISMS,
+              letterSpacing: 1
             }
           }}
         />
