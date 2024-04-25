@@ -1,24 +1,17 @@
-// ParentComponent.js
-import React, { useState } from 'react';
-import { View, Button, StyleSheet } from 'react-native';
+import React from 'react';
+import { View } from 'react-native';
+import PreviewBlindStructure from './PreviewBlindStructure';
 
-const BlindStructure = ({ navigation }) => {
+const BlindStructure = () => {
+  const gameTime = 1800; 
+  let raiseBlindTime = 180; 
 
   return (
-    <View style={styles.container} >
-      <Button
-        title="Go to Blind Structure"
-        onPress={() => navigation.navigate('Preview Blinds Structure')}
-      />
+    <View style={{ flex: 1 }}>
+      <PreviewBlindStructure gameTime={gameTime} raiseBlindTime={raiseBlindTime} />
+      
     </View>
   );
 }
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  }
-})
 
 export default BlindStructure;
