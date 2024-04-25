@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import blindStructureData from '../data.json';
+import { Fonts } from '../CustomFonts';
 
 const PreviewBlindStructure = ({ gameTime, raiseBlindTime }) => {
   const [currentBlindIndex, setCurrentBlindIndex] = useState(0);
@@ -45,35 +46,34 @@ const PreviewBlindStructure = ({ gameTime, raiseBlindTime }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#E3E1D9',
+    backgroundColor: 'white',
+
   },
   headerContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    backgroundColor: '#E3E1D9',
     paddingHorizontal: 10,
     paddingVertical: 10,    
   },
   headerText: {
     color: 'black',
     textAlign: 'center', // Center align the header text
-    fontSize: 20,
+    fontSize: 15,
+    fontFamily: Fonts.ISMR,
+    fontWeight: '500'
   },
   row: {
     flexDirection: 'row', 
     justifyContent: 'space-between',
-    borderBottomWidth: 0.5,
-    borderBottomColor: '#C7C8CC',
     paddingVertical: 5,
     paddingHorizontal: 10,
-    backgroundColor: 'white',
   },
   data: {
     color: 'black',
     textAlign: 'left', // Align data text to the left by default
     flex: 1,
-    fontSize: 20,
-
+    fontSize: 15,
+    fontFamily: Fonts.SFPro,
   },
   dataCenter: {
     textAlign: 'center', // Center align the time data

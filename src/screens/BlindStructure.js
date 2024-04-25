@@ -2,13 +2,13 @@
 import React, { useState } from 'react';
 import { View, Button, StyleSheet } from 'react-native';
 
-const HomeScreen = ({ navigation }) => {
+const BlindStructure = ({ navigation }) => {
 
   return (
     <View style={styles.container} >
       <Button
         title="Go to Blind Structure"
-        onPress={() => navigation.navigate('Preview Blind Structure')}
+        onPress={() => navigation.navigate('Preview Blinds Structure')}
       />
     </View>
   );
@@ -21,4 +21,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default HomeScreen;
+export default BlindStructure;

@@ -2,12 +2,52 @@
   "migIndex": 1,
   "data": [
     {
-      "path": "assets/fonts/Poppins-Medium.ttf",
-      "sha1": "283f21b44efbdbf276ba802be2d949a36bbc4233"
+      "path": "assets/fonts/DMSXtra.ttf",
+      "sha1": "5aef6f351fc71740af511471ed69fb07dfa1b3e5"
     },
     {
-      "path": "assets/fonts/Poppins-Regular.ttf",
-      "sha1": "fdd3002e7d814ee47c1c1b8487c72c6bbb3a2d00"
+      "path": "assets/fonts/InstrumentSans-Medium.ttf",
+      "sha1": "0bc050172c857150349e8f5fdb586fe26db81647"
+    },
+    {
+      "path": "assets/fonts/InstrumentSans-Regular.ttf",
+      "sha1": "85a0b0c01deba8e116ef26bb181f121564b2f48b"
+    },
+    {
+      "path": "assets/fonts/InstrumentSans-SemiBold.ttf",
+      "sha1": "dc0e994aa5409ffe7b946a900f4b61fffb99a32e"
+    },
+    {
+      "path": "assets/fonts/Poppins-ExtraBold.ttf",
+      "sha1": "4b5c0750f073abd576413a0898d3b95adaf199c8"
+    },
+    {
+      "path": "assets/fonts/Poppins-SemiBold.ttf",
+      "sha1": "8a4ace9392d06bcb7f8ea2f5169b07e4c383a90d"
+    },
+    {
+      "path": "assets/fonts/Raleway-Black.ttf",
+      "sha1": "4f6faddc3e5ec227d8352eda71c3367f67ee5732"
+    },
+    {
+      "path": "assets/fonts/Raleway-Light.ttf",
+      "sha1": "8d2b201f053f6011b2f02111fb44b76a8146824a"
+    },
+    {
+      "path": "assets/fonts/Raleway-Medium.ttf",
+      "sha1": "18128ef6b5306a11f256a4f16c2fa63ab8b608d9"
+    },
+    {
+      "path": "assets/fonts/Raleway-Regular.ttf",
+      "sha1": "5a37f51d6a22ae86cc64c9085b5f64b180ad2609"
+    },
+    {
+      "path": "assets/fonts/SF-Pro-Display-Medium.otf",
+      "sha1": "0ab3d1e22bf8781b2d4ca110319306363c21cd94"
+    },
+    {
+      "path": "assets/fonts/SF-Pro.ttf",
+      "sha1": "4535cc06bec417ffb7de0f594433206566b1245a"
     }
   ]
 }
