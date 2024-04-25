@@ -4,39 +4,38 @@ import { Fonts } from '../CustomFonts';
 
 const PreviewBlindStructure = ({ gameTime, raiseBlindTime }) => {
   const [currentBlindIndex, setCurrentBlindIndex] = useState(0);
+  const [blindStructure, setBlindStructure] = useState([]);
 
   useEffect(() => {
+    const computeBlindStructure = () => {
+      const levels = Math.floor(gameTime / raiseBlindTime);
+      const structure = [];
+      let bigBlind = 1;
+      let currentTime = 180; // Start time from 03:00
+
+      for (let i = 0; i < levels; i++) {
+        const level = i + 1;
+        const timeHours = Math.floor(currentTime / 60);
+        const timeMinutes = currentTime % 60;
+        const timeString = `${timeHours.toString().padStart(2, '0')}:${timeMinutes.toString().padStart(2, '0')}`;
+        const blinds = `${bigBlind}/${bigBlind * 2}`;
+
+        structure.push({ level, timeString, blinds });
+
+        bigBlind *= 2;
+        currentTime += raiseBlindTime;
+      }
+
+      return structure;
+    };
+    setBlindStructure(computeBlindStructure());
+
     const timer = setInterval(() => {
       setCurrentBlindIndex(prevIndex => prevIndex + 1);
     }, raiseBlindTime * 1000); // Convert raiseBlindTime from seconds to milliseconds
 
-    return () => clearInterval(timer);
-  }, []);
-
-  // Compute blind structure based on the provided pattern
-  const computeBlindStructure = () => {
-    const levels = Math.floor(gameTime / raiseBlindTime);
-    const blindStructure = [];
-
-    let bigBlind = 1;
-    let currentTime = 0;
-    for (let i = 0; i < levels; i++) {
-      const level = i + 1;
-      const timeHours = Math.floor(currentTime / 60);
-      const timeMinutes = currentTime % 60;
-      const timeString = `${timeHours.toString().padStart(2, '0')}:${timeMinutes.toString().padStart(2, '0')}`;
-      const blinds = `${bigBlind}/${bigBlind * 2}`;
-
-      blindStructure.push({ level, timeString, blinds });
-
-      bigBlind *= 2;
-      currentTime += raiseBlindTime;
-    }
-
-    return blindStructure;
-  };
-
-  const blindStructure = computeBlindStructure();
+    return () => clearInterval(timer); 
+  }, [gameTime, raiseBlindTime]);
 
   return (
     <View style={styles.container}>
