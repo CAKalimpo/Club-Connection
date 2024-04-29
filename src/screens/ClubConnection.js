@@ -1,34 +1,22 @@
-import React, { useState } from 'react';
-import { View, Text, Button, TextInput } from 'react-native';
+import React from 'react';
+import { View, Text, StyleSheet, Button, TextInput } from 'react-native';
 import { styles } from '../style';
-
+import useConnection from './useConnection';
 const ClubConnection = () => {
-    const [userInputConnectMethod, setUserInputConnectMethod] = useState('');
-    const [placeholderConnectMethod, setPlaceholderConnectMethod] = useState('xxxxxx');
-    const [userInputNumber, setUserInputNumber] = useState('');
-    const [placeholderNumber, setPlaceholderNumber] = useState('333243783');
+    const {
+        connectMethod,
+        userInputConnectMethod,
+        setUserInputConnectMethod,
+        placeholderConnectMethod,
+        userInputNumber,
+        number,
+        setUserInputNumber,
+        placeholderNumber,
+        saveBtn,
+        clearInput,
+    } = useConnection();
 
-    const saveBtn = () => {
-        if (userInputConnectMethod.trim() !== '') {
-            setUserInputConnectMethod(userInputConnectMethod);
-            alert('Connect method saved: ' + userInputConnectMethod);
-            clearInput()
-            setPlaceholderConnectMethod('xxxxx');
-        } else if (userInputNumber.trim() !== '') {
-            setUserInputNumber(userInputNumber);
-            alert('Number saved: ' + userInputNumber);
-            clearInput()
-            setPlaceholderNumber('333243783');
-        } else {
-            alert('Please enter a valid connect method or number!');
-        }
-    }
-    const clearInput = () => {
-        setUserInputConnectMethod('');
-        setUserInputNumber('');
-    }
-
-    return(
+    return (
         <View style={styles.container}>
             <Text style={styles.title}>Club Connection</Text>
             <View>
@@ -65,7 +53,7 @@ const ClubConnection = () => {
                 </View>
             </View>
         </View>
-    )
-}
+    );
+};
 
 export default ClubConnection;
